@@ -10,19 +10,45 @@ using System.Windows.Forms;
 
 namespace CarRentalApp
 {
-	public partial class AddRentalRecord : Form
+	public partial class AddEditRentalRecord : Form
 	{
-		private readonly CarRentalEntities carRentalEntities;
+		private bool isEditMode;
+		private readonly CarRentalEntities _db;
 
-		public AddRentalRecord()
+		public AddEditRentalRecord()
 		{
 			InitializeComponent();
 			carRentalEntities = new CarRentalEntities();
+			lblTitle.Text = "Add New Vehicle";
+			isEditMode = false;
+			_db = new CarRentalEntities();
 		}
 
-		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		public AddEditRentalRecord(CarRentalRecord recordToEdit)
 		{
+			InitializeComponent();
+			lblTitle.Text = "Edit Rental Record";
+			this.Text = "Edit Rental Record";
+			if (recordToEdit == null)
+			{
+				MessageBox.Show("Please ensure that you selected a valid record to edit");
+				Close();
+			}
+			else
+			{
+				isEditMode = true;
+				_db = new CarRentalEntities();
+				PopulateFields(recordToEdit);
+			}
+		}
 
+		public void PopulateGrid(CarRentalRecord recordToEdit)
+		{
+			tbCustomerName.Text= recordToEdit.CustomerName;
+			dtRented.Value = recordToEdit.DateRented;
+			dtReturned.Value = (DateTime)recordToEdit.DateRented;
+			dtReturned.Value = (DateTime)recordToEdit.DateReturned;
+			tbCost.Text = recordToEdit.Cost.ToString();
 		}
 
 		private void button1_Click(object sender, EventArgs e)

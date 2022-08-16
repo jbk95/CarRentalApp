@@ -29,19 +29,20 @@
 		private void InitializeComponent()
 		{
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-			this.button1 = new System.Windows.Forms.Button();
-			this.cancel = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
+			this.tbLicense = new System.Windows.Forms.TextBox();
+			this.tbYear = new System.Windows.Forms.TextBox();
+			this.tbVin = new System.Windows.Forms.TextBox();
+			this.tbModel = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.textBox4 = new System.Windows.Forms.TextBox();
-			this.textBox5 = new System.Windows.Forms.TextBox();
+			this.tbMake = new System.Windows.Forms.TextBox();
+			this.btnSave = new System.Windows.Forms.Button();
+			this.btnCancel = new System.Windows.Forms.Button();
+			this.lblTitle = new System.Windows.Forms.Label();
+			this.lblid = new System.Windows.Forms.Label();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -50,16 +51,16 @@
 			this.tableLayoutPanel1.ColumnCount = 2;
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel1.Controls.Add(this.textBox5, 1, 4);
-			this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 3);
-			this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 2);
-			this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
+			this.tableLayoutPanel1.Controls.Add(this.tbLicense, 1, 4);
+			this.tableLayoutPanel1.Controls.Add(this.tbYear, 1, 3);
+			this.tableLayoutPanel1.Controls.Add(this.tbVin, 1, 2);
+			this.tableLayoutPanel1.Controls.Add(this.tbModel, 1, 1);
 			this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
 			this.tableLayoutPanel1.Controls.Add(this.label4, 0, 1);
 			this.tableLayoutPanel1.Controls.Add(this.label6, 0, 2);
 			this.tableLayoutPanel1.Controls.Add(this.label8, 0, 3);
 			this.tableLayoutPanel1.Controls.Add(this.label10, 0, 4);
-			this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
+			this.tableLayoutPanel1.Controls.Add(this.tbMake, 1, 0);
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 113);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 5;
@@ -71,33 +72,33 @@
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(785, 233);
 			this.tableLayoutPanel1.TabIndex = 0;
 			// 
-			// button1
+			// tbLicense
 			// 
-			this.button1.Location = new System.Drawing.Point(13, 372);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(288, 66);
-			this.button1.TabIndex = 0;
-			this.button1.Text = "Save Changes";
-			this.button1.UseVisualStyleBackColor = true;
+			this.tbLicense.Location = new System.Drawing.Point(395, 187);
+			this.tbLicense.Name = "tbLicense";
+			this.tbLicense.Size = new System.Drawing.Size(204, 22);
+			this.tbLicense.TabIndex = 13;
 			// 
-			// cancel
+			// tbYear
 			// 
-			this.cancel.Location = new System.Drawing.Point(500, 372);
-			this.cancel.Name = "cancel";
-			this.cancel.Size = new System.Drawing.Size(288, 66);
-			this.cancel.TabIndex = 1;
-			this.cancel.Text = "Cancel";
-			this.cancel.UseVisualStyleBackColor = true;
+			this.tbYear.Location = new System.Drawing.Point(395, 141);
+			this.tbYear.Name = "tbYear";
+			this.tbYear.Size = new System.Drawing.Size(204, 22);
+			this.tbYear.TabIndex = 12;
 			// 
-			// label1
+			// tbVin
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(106, 21);
-			this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(0, 60);
-			this.label1.TabIndex = 2;
+			this.tbVin.Location = new System.Drawing.Point(395, 95);
+			this.tbVin.Name = "tbVin";
+			this.tbVin.Size = new System.Drawing.Size(204, 22);
+			this.tbVin.TabIndex = 11;
+			// 
+			// tbModel
+			// 
+			this.tbModel.Location = new System.Drawing.Point(395, 49);
+			this.tbModel.Name = "tbModel";
+			this.tbModel.Size = new System.Drawing.Size(204, 22);
+			this.tbModel.TabIndex = 10;
 			// 
 			// label2
 			// 
@@ -144,49 +145,60 @@
 			this.label10.TabIndex = 8;
 			this.label10.Text = "License Plate Number";
 			// 
-			// textBox1
+			// tbMake
 			// 
-			this.textBox1.Location = new System.Drawing.Point(395, 3);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(204, 22);
-			this.textBox1.TabIndex = 9;
+			this.tbMake.Location = new System.Drawing.Point(395, 3);
+			this.tbMake.Name = "tbMake";
+			this.tbMake.Size = new System.Drawing.Size(204, 22);
+			this.tbMake.TabIndex = 9;
 			// 
-			// textBox2
+			// btnSave
 			// 
-			this.textBox2.Location = new System.Drawing.Point(395, 49);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(204, 22);
-			this.textBox2.TabIndex = 10;
+			this.btnSave.Location = new System.Drawing.Point(13, 372);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(288, 66);
+			this.btnSave.TabIndex = 0;
+			this.btnSave.Text = "Save Changes";
+			this.btnSave.UseVisualStyleBackColor = true;
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
-			// textBox3
+			// btnCancel
 			// 
-			this.textBox3.Location = new System.Drawing.Point(395, 95);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(204, 22);
-			this.textBox3.TabIndex = 11;
+			this.btnCancel.Location = new System.Drawing.Point(500, 372);
+			this.btnCancel.Name = "btnCancel";
+			this.btnCancel.Size = new System.Drawing.Size(288, 66);
+			this.btnCancel.TabIndex = 1;
+			this.btnCancel.Text = "Cancel";
+			this.btnCancel.UseVisualStyleBackColor = true;
+			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 			// 
-			// textBox4
+			// lblTitle
 			// 
-			this.textBox4.Location = new System.Drawing.Point(395, 141);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(204, 22);
-			this.textBox4.TabIndex = 12;
+			this.lblTitle.AutoSize = true;
+			this.lblTitle.Font = new System.Drawing.Font("Lucida Calligraphy", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblTitle.Location = new System.Drawing.Point(106, 21);
+			this.lblTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.lblTitle.Name = "lblTitle";
+			this.lblTitle.Size = new System.Drawing.Size(0, 60);
+			this.lblTitle.TabIndex = 2;
 			// 
-			// textBox5
+			// lblid
 			// 
-			this.textBox5.Location = new System.Drawing.Point(395, 187);
-			this.textBox5.Name = "textBox5";
-			this.textBox5.Size = new System.Drawing.Size(204, 22);
-			this.textBox5.TabIndex = 13;
+			this.lblid.AutoSize = true;
+			this.lblid.Location = new System.Drawing.Point(405, 94);
+			this.lblid.Name = "lblid";
+			this.lblid.Size = new System.Drawing.Size(0, 16);
+			this.lblid.TabIndex = 3;
 			// 
 			// AddEditVehicle
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.cancel);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.lblid);
+			this.Controls.Add(this.lblTitle);
+			this.Controls.Add(this.btnCancel);
+			this.Controls.Add(this.btnSave);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Name = "AddEditVehicle";
 			this.Text = "Add Edit Vehicle";
@@ -200,18 +212,19 @@
 		#endregion
 
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button cancel;
-		private System.Windows.Forms.TextBox textBox5;
-		private System.Windows.Forms.TextBox textBox4;
-		private System.Windows.Forms.TextBox textBox3;
-		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.Button btnSave;
+		private System.Windows.Forms.Button btnCancel;
+		private System.Windows.Forms.TextBox tbLicense;
+		private System.Windows.Forms.TextBox tbYear;
+		private System.Windows.Forms.TextBox tbVin;
+		private System.Windows.Forms.TextBox tbModel;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.TextBox tbMake;
+		private System.Windows.Forms.Label lblTitle;
+		private System.Windows.Forms.Label lblid;
 	}
 }

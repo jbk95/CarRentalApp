@@ -1,6 +1,6 @@
 ﻿namespace CarRentalApp
 {
-	partial class AddRentalRecord
+	partial class AddEditRentalRecord
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.label1 = new System.Windows.Forms.Label();
+			this.lblTitle = new System.Windows.Forms.Label();
 			this.tbCustomerName = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.dtRented = new System.Windows.Forms.DateTimePicker();
@@ -43,24 +43,24 @@
 			this.button2 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// label1
+			// lblTitle
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(216, 41);
-			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(414, 49);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Add Rental Record";
-			this.label1.Click += new System.EventHandler(this.label1_Click);
+			this.lblTitle.AutoSize = true;
+			this.lblTitle.Font = new System.Drawing.Font("Lucida Calligraphy", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblTitle.Location = new System.Drawing.Point(216, 41);
+			this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblTitle.Name = "lblTitle";
+			this.lblTitle.Size = new System.Drawing.Size(508, 60);
+			this.lblTitle.TabIndex = 0;
+			this.lblTitle.Text = "Add Rental Record";
+			this.lblTitle.Click += new System.EventHandler(this.label1_Click);
 			// 
 			// tbCustomerName
 			// 
 			this.tbCustomerName.Location = new System.Drawing.Point(34, 209);
 			this.tbCustomerName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.tbCustomerName.Name = "tbCustomerName";
-			this.tbCustomerName.Size = new System.Drawing.Size(368, 26);
+			this.tbCustomerName.Size = new System.Drawing.Size(368, 30);
 			this.tbCustomerName.TabIndex = 1;
 			// 
 			// label2
@@ -69,7 +69,7 @@
 			this.label2.Location = new System.Drawing.Point(34, 175);
 			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(124, 20);
+			this.label2.Size = new System.Drawing.Size(154, 25);
 			this.label2.TabIndex = 2;
 			this.label2.Text = "Customer Name";
 			// 
@@ -77,7 +77,7 @@
 			// 
 			this.dtRented.Location = new System.Drawing.Point(34, 298);
 			this.dtRented.Name = "dtRented";
-			this.dtRented.Size = new System.Drawing.Size(363, 26);
+			this.dtRented.Size = new System.Drawing.Size(363, 30);
 			this.dtRented.TabIndex = 3;
 			// 
 			// label3
@@ -86,7 +86,7 @@
 			this.label3.Location = new System.Drawing.Point(34, 270);
 			this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(101, 20);
+			this.label3.Size = new System.Drawing.Size(120, 25);
 			this.label3.TabIndex = 4;
 			this.label3.Text = "Date Rented";
 			// 
@@ -96,7 +96,7 @@
 			this.label4.Location = new System.Drawing.Point(457, 261);
 			this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(115, 20);
+			this.label4.Size = new System.Drawing.Size(137, 25);
 			this.label4.TabIndex = 6;
 			this.label4.Text = "Date Returned";
 			// 
@@ -104,7 +104,7 @@
 			// 
 			this.dtReturned.Location = new System.Drawing.Point(457, 298);
 			this.dtReturned.Name = "dtReturned";
-			this.dtReturned.Size = new System.Drawing.Size(363, 26);
+			this.dtReturned.Size = new System.Drawing.Size(363, 30);
 			this.dtReturned.TabIndex = 5;
 			// 
 			// cbTypeOfCar
@@ -113,9 +113,8 @@
 			this.cbTypeOfCar.FormattingEnabled = true;
 			this.cbTypeOfCar.Location = new System.Drawing.Point(34, 381);
 			this.cbTypeOfCar.Name = "cbTypeOfCar";
-			this.cbTypeOfCar.Size = new System.Drawing.Size(363, 28);
+			this.cbTypeOfCar.Size = new System.Drawing.Size(363, 33);
 			this.cbTypeOfCar.TabIndex = 7;
-			this.cbTypeOfCar.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
 			// 
 			// label5
 			// 
@@ -123,7 +122,7 @@
 			this.label5.Location = new System.Drawing.Point(34, 353);
 			this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(90, 20);
+			this.label5.Size = new System.Drawing.Size(115, 25);
 			this.label5.TabIndex = 8;
 			this.label5.Text = "Type of Car";
 			// 
@@ -143,7 +142,7 @@
 			this.label6.Location = new System.Drawing.Point(452, 175);
 			this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(42, 20);
+			this.label6.Size = new System.Drawing.Size(53, 25);
 			this.label6.TabIndex = 11;
 			this.label6.Text = "Cost";
 			// 
@@ -152,7 +151,7 @@
 			this.tbCost.Location = new System.Drawing.Point(452, 209);
 			this.tbCost.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.tbCost.Name = "tbCost";
-			this.tbCost.Size = new System.Drawing.Size(368, 26);
+			this.tbCost.Size = new System.Drawing.Size(368, 30);
 			this.tbCost.TabIndex = 10;
 			// 
 			// button2
@@ -165,9 +164,9 @@
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
-			// AddRentalRecord
+			// AddEditRentalRecord
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(930, 506);
 			this.Controls.Add(this.button2);
@@ -182,10 +181,10 @@
 			this.Controls.Add(this.dtRented);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.tbCustomerName);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.lblTitle);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.Name = "AddRentalRecord";
+			this.Name = "AddEditRentalRecord";
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.ResumeLayout(false);
@@ -195,7 +194,7 @@
 
 		#endregion
 
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label lblTitle;
 		private System.Windows.Forms.TextBox tbCustomerName;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.DateTimePicker dtRented;
